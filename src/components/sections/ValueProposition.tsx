@@ -7,25 +7,25 @@ const ValueProposition = () => {
       icon: Brain,
       title: "GenAI-Powered Intelligence",
       description: "Multi-agent LLM pipelines that understand context, automate complex workflows, and generate actionable insights from unstructured data.",
-      gradient: "from-tech-blue to-electric-purple"
+      gradient: "from-light-green to-green-accent"
     },
     {
       icon: Gauge,
       title: "Real-Time Decision Making",
       description: "Process massive telemetry streams and IoT data at scale, enabling instant responses to critical operational changes.",
-      gradient: "from-electric-purple to-tech-blue"
+      gradient: "from-green-accent to-light-green"
     },
     {
       icon: Database,
       title: "Enterprise Data Integration",
       description: "Seamlessly connect disparate systems with modern data stacks, time-series forecasting, and advanced analytics.",
-      gradient: "from-success-green to-tech-blue"
+      gradient: "from-light-green to-electric-purple"
     },
     {
       icon: Lock,
       title: "Regulatory Compliance",
       description: "Built for regulated industries with enterprise-grade security, audit trails, and compliance frameworks.",
-      gradient: "from-warning-amber to-electric-purple"
+      gradient: "from-warning-amber to-green-accent"
     }
   ];
 
@@ -60,7 +60,7 @@ const ValueProposition = () => {
         <div className="mt-16 text-center">
           <div className="inline-flex items-center space-x-8 p-8 bg-gradient-card rounded-2xl border border-border">
             <div className="text-center">
-              <div className="text-2xl font-bold text-tech-blue">10x</div>
+              <div className="text-2xl font-bold text-light-green">10x</div>
               <div className="text-sm text-muted-foreground">Faster Analysis</div>
             </div>
             <div className="w-px h-12 bg-border"></div>
@@ -70,7 +70,7 @@ const ValueProposition = () => {
             </div>
             <div className="w-px h-12 bg-border"></div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-success-green">99.9%</div>
+              <div className="text-2xl font-bold text-green-accent">99.9%</div>
               <div className="text-sm text-muted-foreground">Uptime SLA</div>
             </div>
           </div>

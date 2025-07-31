@@ -10,7 +10,7 @@ const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <div className="w-8 h-8 bg-gradient-primary rounded-lg"></div>
-              <span className="text-xl font-bold text-gradient">DataForge AI</span>
+              <span className="text-xl font-bold text-gradient">SustainIQ AI</span>
             </div>
             <p className="text-muted-foreground text-sm leading-relaxed">
               Transforming enterprise data into intelligent action through advanced AI & 
@@ -46,8 +46,8 @@ const Footer = () => {
             <div className="space-y-3 text-sm">
               <div className="flex items-center space-x-3 text-muted-foreground">
                 <Mail className="h-4 w-4" />
-                <a href="mailto:hello@dataforge.ai" className="hover:text-foreground transition-colors">
-                  hello@dataforge.ai
+                <a href="mailto:hello@sustainiq.ai" className="hover:text-foreground transition-colors">
+                  hello@sustainiq.ai
                 </a>
               </div>
               <div className="flex items-center space-x-3 text-muted-foreground">
@@ -58,7 +58,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3 text-muted-foreground">
                 <Linkedin className="h-4 w-4" />
-                <a href="https://linkedin.com/company/dataforge-ai" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">
+                <a href="https://linkedin.com/company/sustainiq-ai" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">
                   LinkedIn
                 </a>
               </div>
@@ -77,7 +77,7 @@ const Footer = () => {
         
         <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <div className="text-sm text-muted-foreground">
-            © 2024 DataForge AI. All rights reserved.
+            © 2024 SustainIQ AI. All rights reserved.
           </div>
           <div className="flex space-x-6 text-sm text-muted-foreground">
             <a href="#" className="hover:text-foreground transition-colors">Privacy Policy</a>
