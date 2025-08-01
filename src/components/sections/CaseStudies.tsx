@@ -6,7 +6,7 @@ import { ArrowRight, TrendingUp, Clock, Database } from "lucide-react";
 const CaseStudies = () => {
   const caseStudies = [
     {
-      company: "Enchanted Rock",
+      company: "Major Energy Provider",
       industry: "Energy",
       challenge: "Manual regulatory review processes taking weeks to complete, creating operational bottlenecks and compliance risks.",
       solution: "Implemented GenAI-powered regulatory intelligence platform with multi-agent LLM pipelines for automated document analysis and compliance checking.",
@@ -19,7 +19,7 @@ const CaseStudies = () => {
       role: "Head of Regulatory Affairs"
     },
     {
-      company: "Oxy (Occidental Petroleum)",
+      company: "Global Oil & Gas Corp",
       industry: "Oil & Gas",
       challenge: "Processing massive volumes of telemetry data from distributed operations while maintaining real-time visibility and control.",
       solution: "Deployed advanced IoT analytics platform with time-series forecasting and real-time data processing capabilities at enterprise scale.",
