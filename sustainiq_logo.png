@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 150">
+  <!-- Larger S in different font -->
+  <text x="35" y="102" font-family="Georgia" font-size="75" font-weight="700" fill="#00F4C8">
+    S
+  </text>
+
+  <!-- USTAIN text -->
+  <text x="85" y="100" font-family="Arial" font-size="64" font-weight="600" letter-spacing="3" fill="#333333">
+    USTAIN
+  </text>
+    
+  <!-- IQ with spacing -->
+  <text x="360" y="100" font-family="Arial" font-size="64" font-weight="600" fill="#00F4C8">
+    IQ
+  </text>
+    
+  <!-- Bottom line -->
+  <line x1="40" y1="130" x2="440" y2="130" stroke="#00F4C8" stroke-width="1.5" opacity="0.3"/>
+  
+  <!-- Small lines near IQ -->
+  <line x1="360" y1="40" x2="410" y2="40" stroke="#00F4C8" stroke-width="1.5" opacity="0.3"/>
+  <line x1="360" y1="50" x2="410" y2="50" stroke="#00F4C8" stroke-width="1.5" opacity="0.3"/>
+</svg>
