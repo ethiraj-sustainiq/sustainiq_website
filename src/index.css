@@ -41,6 +41,8 @@ All colors MUST be HSL.
     --green-accent: 140 80% 45%;
     --electric-purple: 280 90% 65%;
     --warning-amber: 38 92% 50%;
+    --success-green: 120 70% 55%;
+    --tech-blue: 210 90% 60%;
     
     /* Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(var(--light-green)), hsl(var(--green-accent)));
@@ -118,7 +120,17 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading;
   }
 }
 

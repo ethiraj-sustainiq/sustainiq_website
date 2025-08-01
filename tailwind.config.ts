@@ -56,6 +56,8 @@ export default {
 				'green-accent': 'hsl(var(--green-accent))',
 				'electric-purple': 'hsl(var(--electric-purple))',
 				'warning-amber': 'hsl(var(--warning-amber))',
+        'success-green': 'hsl(var(--success-green))',
+        'tech-blue': 'hsl(var(--tech-blue))',
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -104,7 +106,11 @@ export default {
 			boxShadow: {
 				'glow': 'var(--shadow-glow)',
 				'card': 'var(--shadow-card)'
-			}
+			},
+      fontFamily: {
+        sans: ["Inter", "sans-serif"],
+        heading: ["Lexend", "sans-serif"],
+      }
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
