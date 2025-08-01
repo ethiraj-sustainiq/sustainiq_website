@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const Navigation = () => {
   return (
@@ -20,6 +21,9 @@ const Navigation = () => {
             <a href="#technology" className="text-muted-foreground hover:text-foreground transition-colors">
               Technology
             </a>
+            <Link to="/blog" className="text-muted-foreground hover:text-foreground transition-colors">
+              Blog
+            </Link>
             <a href="#contact" className="text-muted-foreground hover:text-foreground transition-colors">
               Contact
             </a>
