@@ -1,73 +1,64 @@
-# Welcome to your Lovable project
+# SustainIQ AI Website
 
-## Project info
+This is the official marketing and informational website for SustainIQ AI. It is a modern, responsive web application built with Vite, React, TypeScript, and Tailwind CSS.
 
-**URL**: https://lovable.dev/projects/aab3b0cc-a768-458f-b457-ed6f48437f8d
+## Getting Started
 
-## How can I edit this code?
+Follow these instructions to set up the project for local development.
 
-There are several ways of editing your application.
+### Prerequisites
 
-**Use Lovable**
+- [Node.js](https://nodejs.org/) (v18 or higher is recommended)
+- [npm](https://www.npmjs.com/) (comes with Node.js)
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/aab3b0cc-a768-458f-b457-ed6f48437f8d) and start prompting.
+### Installation
 
-Changes made via Lovable will be committed automatically to this repo.
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/ethiraj-sustainiq/sustainiq_website.git
+    ```
 
-**Use your preferred IDE**
+2.  **Navigate to the project directory:**
+    ```bash
+    cd sustainiq_website
+    ```
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+3.  **Install the dependencies:**
+    ```bash
+    npm install
+    ```
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## Local Development
 
-Follow these steps:
+To run the website on a local development server with hot-reloading, use the following command:
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+This will start the server, typically on `http://localhost:8080`. You can now open this URL in your browser to see the website. Any changes you make to the source code will be reflected instantly.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Deployment to GitHub Pages
 
-**Use GitHub Codespaces**
+This project is configured for continuous deployment to GitHub Pages whenever changes are pushed to the `main` branch.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### How It Works
 
-## What technologies are used for this project?
+1.  **Push to `main`:** When a commit is pushed to the `main` branch, it automatically triggers the GitHub Actions workflow defined in `.github/workflows/jekyll-gh-pages.yml`.
 
-This project is built with:
+2.  **Build Process:** The workflow builds the application for production using `npm run build`. This creates a `dist` directory with all the necessary static files (HTML, CSS, JavaScript).
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+3.  **Deployment:** The workflow then deploys the contents of the `dist` directory to the `gh-pages` branch, which is the source for the GitHub Pages site.
 
-## How can I deploy this project?
+### Important Configuration Files
 
-Simply open [Lovable](https://lovable.dev/projects/aab3b0cc-a768-458f-b457-ed6f48437f8d) and click on Share -> Publish.
+-   **`.github/workflows/jekyll-gh-pages.yml`**: Defines the CI/CD pipeline for building and deploying the site.
+-   **`vite.config.ts`**: Contains the Vite configuration. The `base` property is set to `'/'` to support the custom domain.
+-   **`public/CNAME`**: This file contains the custom domain (`sustainiq.ai`) and is essential for GitHub Pages to route traffic correctly.
+-   **`public/.nojekyll`**: This empty file tells GitHub Pages to not use its default Jekyll build process, which is crucial for single-page applications like this one.
 
-## Can I connect a custom domain to my Lovable project?
+### Making Changes
 
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+1.  Make your desired code changes locally.
+2.  Commit and push the changes to the `main` branch.
+3.  The GitHub Actions workflow will handle the rest. Monitor the deployment progress in the "Actions" tab of the repository.
