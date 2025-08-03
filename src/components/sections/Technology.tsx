@@ -1,6 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Layers, Brain, Database, Cloud, Lock, Zap } from "lucide-react";
+import { Layers, Brain, Database, Cloud, Lock, Zap, Share2 } from "lucide-react";
 
 const Technology = () => {
   const techStack = [
@@ -33,18 +33,23 @@ const Technology = () => {
   const architectureFeatures = [
     {
       title: "Retrieval-Augmented Generation",
-      description: "Advanced RAG implementations that combine your enterprise data with large language models for contextually accurate responses.",
+      description: "Advanced RAG implementations that combine your enterprise data with large language models. This is the core technology that allows our platform to read your manuals and connect them to real-time events.",
       icon: Layers
     },
     {
       title: "Real-Time Processing",
-      description: "Stream processing architectures capable of handling massive telemetry volumes with sub-second latency requirements.",
+      description: "Stream processing architectures capable of handling massive telemetry volumes with sub-second latency. This ensures that insights from your operational data are delivered instantly, preventing costly delays.",
       icon: Zap
     },
     {
       title: "Modern Data Stack",
-      description: "Cloud-native data platforms built for scale, flexibility, and enterprise security requirements.",
+      description: "Cloud-native data platforms built for scale, flexibility, and enterprise security. This robust foundation allows us to seamlessly integrate with your existing systems, both on-premise and in the cloud.",
       icon: Database
+    },
+    {
+      title: "Multi-Agent AI Architecture",
+      description: "Our platform is built on a sophisticated multi-agent architecture. Specialized AI agents—like our Context Agent, Knowledge Agent, and Reasoning Agent—collaborate to automate complex tasks, from diagnosing equipment failures to ensuring regulatory compliance. This modular approach provides greater accuracy, transparency, and scalability than monolithic AI models.",
+      icon: Share2
     }
   ];
 
@@ -57,8 +62,7 @@ const Technology = () => {
             <span className="text-gradient"> Cutting-Edge Technology</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Our platforms leverage the latest advances in AI, data engineering, and cloud infrastructure 
-            to deliver enterprise-grade solutions that scale.
+            Our platform is built on an enterprise-grade technical foundation designed to uniquely unify your operational and documentary data at scale.
           </p>
         </div>
         
@@ -86,7 +90,7 @@ const Technology = () => {
         {/* Architecture Features */}
         <div className="mb-16">
           <h3 className="text-3xl font-bold text-center mb-12">Reference Architectures</h3>
-          <div className="grid lg:grid-cols-3 gap-8">
+          <div className="grid lg:grid-cols-4 gap-8">
             {architectureFeatures.map((feature, index) => (
               <Card key={index} className="p-8 bg-gradient-card border-border shadow-card text-center">
                 <div className="space-y-4">

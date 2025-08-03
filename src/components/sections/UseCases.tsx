@@ -6,34 +6,34 @@ const UseCases = () => {
   const useCases = [
     {
       icon: Cpu,
-      title: "Real-Time IoT Analytics",
-      description: "Process massive telemetry streams from industrial equipment, enabling predictive maintenance and operational optimization.",
-      benefits: ["475GB+ daily processing", "Sub-second response times", "Predictive alerts"],
+      title: "Predictive Maintenance",
+      description: "We go beyond simple alerts. Our platform analyzes real-time telemetry from your equipment and instantly cross-references it with your OEM manuals and maintenance history to provide a complete diagnostic, including the likely root cause and the correct repair procedure.",
+      benefits: ["Reduce unplanned downtime by up to 35%", "Accelerate root-cause analysis from days to minutes", "Equip technicians with procedural guidance"],
       industries: ["Energy", "Manufacturing", "Utilities"],
       color: "tech-blue"
     },
     {
       icon: TrendingUp,
-      title: "Time-Series Forecasting",
-      description: "Advanced ML models that predict equipment failures, demand patterns, and operational bottlenecks before they impact business.",
-      benefits: ["95% accuracy rates", "30-day forecasts", "Automated insights"],
-      industries: ["Oil & Gas", "Power Generation", "Supply Chain"],
+      title: "Demand & Failure Forecasting",
+      description: "Our forecasting models learn from both your historical time-series data and your documented operational limits. This unified approach allows us to more accurately predict future equipment failures, energy demand, and potential supply chain bottlenecks.",
+      benefits: ["Improve forecast accuracy with contextual data", "Optimize maintenance schedules and inventory", "Prevent operational disruptions before they occur"],
+      industries: ["Oil & Gas", "Power Generation"],
       color: "electric-purple"
     },
     {
       icon: Search,
-      title: "Enterprise Search & Chat",
-      description: "RAG-powered systems that instantly surface critical information from vast document repositories and knowledge bases.",
-      benefits: ["Natural language queries", "Multi-source integration", "Context-aware results"],
-      industries: ["Regulatory", "Legal", "Compliance"],
+      title: "Intelligent Document Retrieval",
+      description: "This is more than just search. When an operational event occurs, your team can ask plain-language questions and get instant answers sourced directly from your manuals, contracts, and compliance documents, with citations included.",
+      benefits: ["Find critical procedures and specs in seconds", "Verify vendor SLAs against real-time performance", "Reduce reliance on institutional knowledge"],
+      industries: [],
       color: "success-green"
     },
     {
       icon: Shield,
-      title: "Regulatory Intelligence",
-      description: "Multi-agent LLM pipelines that monitor regulatory changes, assess compliance impact, and automate report generation.",
-      benefits: ["60% faster reviews", "Automated compliance", "Risk assessment"],
-      industries: ["Financial Services", "Healthcare", "Energy"],
+      title: "Automated Compliance",
+      description: "Achieve continuous, audit-ready compliance. Our platform monitors your real-time operational data, like emissions, and compares it against your digitized environmental permits and safety regulations to automatically flag and document any deviation.",
+      benefits: ["Cut compliance reporting time by over 90%", "Prevent violations with real-time alerts", "Simplify audit prep with automated data trails"],
+      industries: ["Energy"],
       color: "warning-amber"
     }
   ];
@@ -43,12 +43,11 @@ const UseCases = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 space-y-4">
           <h2 className="text-4xl lg:text-5xl font-bold">
-            Proven Use Cases Across
-            <span className="text-gradient"> Critical Industries</span>
+            Solutions for
+            <span className="text-gradient"> Industrial Operations</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            From real-time telemetry processing to regulatory intelligence, our platforms solve complex challenges 
-            that matter most to enterprise operations.
+            Our solutions are built on a single, unified platform that combines your real-time operational data with your enterprise documentation to deliver true, end-to-end intelligence.
           </p>
         </div>
         

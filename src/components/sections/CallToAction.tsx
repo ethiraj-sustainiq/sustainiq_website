@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { ArrowRight, Calendar, MessageSquare, Phone } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 const CallToAction = () => {
   return (
@@ -16,59 +15,22 @@ const CallToAction = () => {
             <div className="text-center space-y-8">
               <div className="space-y-4">
                 <h2 className="text-4xl lg:text-5xl font-bold">
-                  Ready to Transform Your
-                  <span className="text-gradient"> Data Operations?</span>
+                  See the Financial Impact of
+                  <span className="text-gradient"> Unified Intelligence</span>
                 </h2>
                 <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                  Join industry leaders who are already accelerating decisions, reducing risk, 
-                  and unlocking value from their complex enterprise data.
+                  Schedule a complimentary assessment and we will provide a custom ROI projection for your specific industrial assets.
                 </p>
               </div>
               
-              <div className="grid md:grid-cols-3 gap-6 py-8">
-                <div className="flex items-center space-x-3 justify-center">
-                  <div className="w-10 h-10 rounded-lg bg-tech-blue/20 flex items-center justify-center">
-                    <Calendar className="h-5 w-5 text-tech-blue" />
-                  </div>
-                  <span className="text-sm">30-minute consultation</span>
-                </div>
-                <div className="flex items-center space-x-3 justify-center">
-                  <div className="w-10 h-10 rounded-lg bg-electric-purple/20 flex items-center justify-center">
-                    <MessageSquare className="h-5 w-5 text-electric-purple" />
-                  </div>
-                  <span className="text-sm">Custom solution design</span>
-                </div>
-                <div className="flex items-center space-x-3 justify-center">
-                  <div className="w-10 h-10 rounded-lg bg-success-green/20 flex items-center justify-center">
-                    <Phone className="h-5 w-5 text-success-green" />
-                  </div>
-                  <span className="text-sm">Live platform demo</span>
-                </div>
-              </div>
-              
-              <div className="space-y-6">
-                <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-                  <Input 
-                    placeholder="Enter your business email"
-                    className="flex-1 bg-background border-border"
-                  />
-                  <Button className="bg-gradient-primary text-primary-foreground hover:opacity-90 group whitespace-nowrap">
-                    Book Demo
-                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                  </Button>
-                </div>
-                
-                <div className="flex flex-wrap justify-center gap-4">
-                  <Button size="lg" variant="outline" className="border-border hover:bg-secondary">
-                    Schedule Call
-                  </Button>
-                  <Button size="lg" variant="outline" className="border-border hover:bg-secondary">
-                    Download Whitepaper
-                  </Button>
-                  <Button size="lg" variant="outline" className="border-border hover:bg-secondary">
-                    View Pricing
-                  </Button>
-                </div>
+              <div className="flex flex-wrap justify-center gap-4 pt-4">
+                <Button size="lg" className="bg-gradient-primary text-primary-foreground hover:opacity-90 group">
+                  Get My Free ROI Assessment
+                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                </Button>
+                <Button size="lg" variant="outline" className="border-border hover:bg-secondary">
+                  Ask Our Experts a Question
+                </Button>
               </div>
               
               <div className="text-center pt-6">

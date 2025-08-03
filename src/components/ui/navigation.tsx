@@ -30,7 +30,7 @@ const Navigation = () => {
           </div>
           
           <Button className="bg-gradient-primary text-primary-foreground hover:opacity-90 transition-opacity">
-            Book Demo
+            Get Free Assessment
           </Button>
         </div>
       </div>

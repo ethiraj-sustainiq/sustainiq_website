@@ -4,6 +4,7 @@ import ValueProposition from "@/components/sections/ValueProposition";
 import UseCases from "@/components/sections/UseCases";
 import CaseStudies from "@/components/sections/CaseStudies";
 import Technology from "@/components/sections/Technology";
+import Team from "@/components/sections/Team";
 import CallToAction from "@/components/sections/CallToAction";
 import Footer from "@/components/sections/Footer";
 
@@ -16,6 +17,7 @@ const Index = () => {
       <UseCases />
       <CaseStudies />
       <Technology />
+      <Team />
       <CallToAction />
       <Footer />
     </div>

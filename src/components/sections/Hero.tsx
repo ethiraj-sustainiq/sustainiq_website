@@ -25,18 +25,17 @@ const Hero = () => {
           <div className="space-y-8">
             <div className="space-y-4">
               <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
-                Transform Enterprise
-                <span className="text-gradient"> Data into Intelligent Action</span>
+                The AI Platform That Unifies
+                <span className="text-gradient"> Operations + Documentation Intelligence</span>
               </h1>
               <p className="text-xl text-muted-foreground leading-relaxed">
-                Advanced AI & data platforms that accelerate decisions, reduce risk, and unlock value from complex enterprise data. 
-                Proven to reduce review cycles by 60% while processing massive telemetry at scale.
+                The AI platform for industrial leaders in Energy, Oil & Gas, and Manufacturing. We connect your operational data with equipment manuals and procedures to predict failures, automate compliance, and optimize workflows.
               </p>
             </div>
             
             <div className="flex flex-wrap gap-4">
               <Button size="lg" className="bg-gradient-primary text-primary-foreground hover:opacity-90 transition-opacity group">
-                Schedule Demo
+                Get My Free ROI Assessment
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
               <Button size="lg" variant="outline" className="border-border hover:bg-secondary">
@@ -63,33 +62,24 @@ const Hero = () => {
           <div className="lg:justify-self-end">
             <Card className="p-8 bg-gradient-card border-border shadow-card">
               <div className="space-y-6">
-                <div className="text-center">
-                  <h3 className="text-2xl font-semibold mb-2">Ready to accelerate your data strategy?</h3>
-                  <p className="text-muted-foreground">Join enterprise leaders transforming their operations</p>
-                </div>
-                
                 <div className="grid grid-cols-2 gap-4 text-center">
                   <div className="space-y-1">
-                    <div className="text-3xl font-bold text-tech-blue">60%</div>
-                    <div className="text-sm text-muted-foreground">Faster Review Cycles</div>
+                    <div className="text-3xl font-bold text-tech-blue">35%</div>
+                    <div className="text-sm text-muted-foreground">Downtime Reduction</div>
                   </div>
                   <div className="space-y-1">
-                    <div className="text-3xl font-bold text-electric-purple">475GB</div>
-                    <div className="text-sm text-muted-foreground">Daily Processing</div>
+                    <div className="text-3xl font-bold text-electric-purple">$2.4M</div>
+                    <div className="text-sm text-muted-foreground">Avg. Annual Savings</div>
                   </div>
                   <div className="space-y-1">
-                    <div className="text-3xl font-bold text-success-green">24/7</div>
-                    <div className="text-sm text-muted-foreground">Real-time Monitoring</div>
+                    <div className="text-3xl font-bold text-success-green">95%</div>
+                    <div className="text-sm text-muted-foreground">Compliance Accuracy</div>
                   </div>
                   <div className="space-y-1">
-                    <div className="text-3xl font-bold text-warning-amber">Enterprise</div>
-                    <div className="text-sm text-muted-foreground">Scale Ready</div>
+                    <div className="text-3xl font-bold text-warning-amber">8-Week</div>
+                    <div className="text-sm text-muted-foreground">Average Deployment</div>
                   </div>
                 </div>
-                
-                <Button className="w-full bg-gradient-primary text-primary-foreground hover:opacity-90">
-                  Get Started Today
-                </Button>
               </div>
             </Card>
           </div>

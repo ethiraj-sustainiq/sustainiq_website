@@ -9,7 +9,7 @@ const CaseStudies = () => {
       company: "Major Energy Provider",
       industry: "Energy",
       challenge: "Manual regulatory review processes taking weeks to complete, creating operational bottlenecks and compliance risks.",
-      solution: "Implemented GenAI-powered regulatory intelligence platform with multi-agent LLM pipelines for automated document analysis and compliance checking.",
+      solution: "We deployed our unified platform to connect their real-time operational data to their library of regulatory documents. Our AI agents now continuously monitor operations against compliance rules, automatically analyzing and citing the relevant documentation to slash review times.",
       results: [
         { metric: "60%", description: "Reduction in review cycle time", icon: Clock, color: "tech-blue" },
         { metric: "95%", description: "Accuracy in compliance detection", icon: TrendingUp, color: "success-green" },
@@ -22,7 +22,7 @@ const CaseStudies = () => {
       company: "Global Oil & Gas Corp",
       industry: "Oil & Gas",
       challenge: "Processing massive volumes of telemetry data from distributed operations while maintaining real-time visibility and control.",
-      solution: "Deployed advanced IoT analytics platform with time-series forecasting and real-time data processing capabilities at enterprise scale.",
+      solution: "We implemented our unified intelligence platform to process 475GB of daily telemetry data. The system doesn't just flag anomalies; it instantly cross-references them with the equipment's digitized OEM manuals and maintenance procedures to provide engineers with immediate, actionable diagnostic insights.",
       results: [
         { metric: "475GB", description: "Daily telemetry processing", icon: Database, color: "tech-blue" },
         { metric: "<1s", description: "Real-time response latency", icon: Clock, color: "electric-purple" },
@@ -106,7 +106,7 @@ const CaseStudies = () => {
         
         <div className="text-center mt-12">
           <Button size="lg" variant="outline" className="border-border hover:bg-secondary">
-            See All Case Studies
+            Explore Our Work
           </Button>
         </div>
       </div>

@@ -6,25 +6,25 @@ const ValueProposition = () => {
     {
       icon: Brain,
       title: "GenAI-Powered Intelligence",
-      description: "Multi-agent LLM pipelines that understand context, automate complex workflows, and generate actionable insights from unstructured data.",
+      description: "Our AI agents don't just analyze data; they read your documents. By combining real-time operations with your maintenance manuals and procedures, we deliver insights that have true operational context.",
       gradient: "from-light-green to-green-accent"
     },
     {
       icon: Gauge,
       title: "Real-Time Decision Making",
-      description: "Process massive telemetry streams and IoT data at scale, enabling instant responses to critical operational changes.",
+      description: "Instantly transform equipment alerts into action. We process your telemetry data in real-time and automatically surface the correct procedure from your documentation, turning a simple alert into a complete work plan.",
       gradient: "from-green-accent to-light-green"
     },
     {
       icon: Database,
-      title: "Enterprise Data Integration",
-      description: "Seamlessly connect disparate systems with modern data stacks, time-series forecasting, and advanced analytics.",
+      title: "Unified Data & Documents",
+      description: "We connect to everything. Our platform integrates not only with your SCADA and historian data but also with your document repositories, creating a single source of truth for both operational and procedural knowledge.",
       gradient: "from-light-green to-electric-purple"
     },
     {
       icon: Lock,
       title: "Regulatory Compliance",
-      description: "Built for regulated industries with enterprise-grade security, audit trails, and compliance frameworks.",
+      description: "Achieve effortless compliance. Our platform monitors your operational data against your digitized environmental permits and safety regulations, automatically flagging deviations and generating audit-ready reports.",
       gradient: "from-warning-amber to-green-accent"
     }
   ];
@@ -55,25 +55,6 @@ const ValueProposition = () => {
               </div>
             </Card>
           ))}
-        </div>
-        
-        <div className="mt-16 text-center">
-          <div className="inline-flex items-center space-x-8 p-8 bg-gradient-card rounded-2xl border border-border">
-            <div className="text-center">
-              <div className="text-2xl font-bold text-light-green">10x</div>
-              <div className="text-sm text-muted-foreground">Faster Analysis</div>
-            </div>
-            <div className="w-px h-12 bg-border"></div>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-electric-purple">50%</div>
-              <div className="text-sm text-muted-foreground">Cost Reduction</div>
-            </div>
-            <div className="w-px h-12 bg-border"></div>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-green-accent">99.9%</div>
-              <div className="text-sm text-muted-foreground">Uptime SLA</div>
-            </div>
-          </div>
         </div>
       </div>
     </section>

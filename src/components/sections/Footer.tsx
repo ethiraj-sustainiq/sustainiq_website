@@ -36,7 +36,6 @@ const Footer = () => {
               <li><a href="#" className="hover:text-foreground transition-colors">Energy & Utilities</a></li>
               <li><a href="#" className="hover:text-foreground transition-colors">Oil & Gas</a></li>
               <li><a href="#" className="hover:text-foreground transition-colors">Manufacturing</a></li>
-              <li><a href="#" className="hover:text-foreground transition-colors">Financial Services</a></li>
             </ul>
           </div>
           
@@ -65,8 +64,8 @@ const Footer = () => {
               <div className="flex items-start space-x-3 text-muted-foreground">
                 <MapPin className="h-4 w-4 mt-0.5" />
                 <span>
-                  123 Innovation Drive<br />
-                  Austin, TX 78701
+                  77 Sugar Creek Center Blvd Ste. 600<br />
+                  Sugar Land, TX 77478
                 </span>
               </div>
             </div>
