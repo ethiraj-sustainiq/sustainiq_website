@@ -34,13 +34,17 @@ const Hero = () => {
             </div>
             
             <div className="flex flex-wrap gap-4">
-              <Button size="lg" className="bg-gradient-primary text-primary-foreground hover:opacity-90 transition-opacity group">
-                Get My Free ROI Assessment
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
-              <Button size="lg" variant="outline" className="border-border hover:bg-secondary">
-                View Case Studies
-              </Button>
+              <a href="mailto:ethiraj.k@sustainiq.ai?subject=Inquiry about SustainIQ AI Platform&body=Hello, I saw your website and I'm interested in learning more about your AI platform. I'd like to schedule a time to discuss an ROI assessment.">
+                <Button size="lg" className="bg-gradient-primary text-primary-foreground hover:opacity-90 transition-opacity group">
+                  Get My Free ROI Assessment
+                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </a>
+              <a href="#case-studies">
+                <Button size="lg" variant="outline" className="border-border hover:bg-secondary">
+                  View Case Studies
+                </Button>
+              </a>
             </div>
             
             <div className="flex items-center space-x-6 pt-4">
