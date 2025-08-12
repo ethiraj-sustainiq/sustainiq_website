@@ -21,53 +21,31 @@ export default function Hero() {
       />
 
       {/* Enhanced container with better responsive handling */}
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 grid grid-cols-1 items-center gap-8 py-12 sm:py-16 lg:py-20 min-h-screen-mobile safe-top">
+      <div className="container mx-auto px-6 relative z-10 grid lg:grid-cols-2 gap-12 items-center pt-32 pb-12 sm:pt-36 sm:pb-16 lg:pt-40 lg:pb-20 min-h-screen-mobile safe-top">
         
         {/* Enhanced copy block with better typography scaling */}
-        <div className="space-y-6 sm:space-y-8 lg:col-span-1 lg:max-w-4xl lg:mx-auto text-center">
+       <div className="space-y-8 text-center lg:text-left">
+
+     
+        {/* END: Stats Card Block */}  
           
           {/* Main headline with enhanced responsive typography */}
-          <h1 className="max-w-[90%] sm:max-w-[85%] mx-auto text-display-2 font-heading font-extrabold tracking-tight leading-[1.05] text-balance">
-            Turn Industrial Data Into{" "}
-            <span className="text-gradient">Instant, Actionable</span> Intelligence
+            <h1 className="text-5xl lg:text-6xl font-bold leading-tight text-balance">
+            The AI Platform That{" "}
+            <span className="text-gradient">
+              Unifies<br />Operations + Documentation<br />Intelligence
+            </span>
           </h1>
-
           {/* Enhanced description with better spacing and readability */}
           <p className="mt-4 sm:mt-6 max-w-[90%] sm:max-w-[65ch] mx-auto text-base sm:text-lg lg:text-xl text-muted-foreground print:text-black leading-relaxed">
-            SustainIQ AI connects your real-time equipment data with manuals, procedures, and compliance documents — so you can predict failures, prevent downtime, and stay audit-ready automatically.
+               For industrial leaders in Energy, Oil & Gas, and Manufacturing. We connect your operational data with equipment manuals and procedures to predict failures, automate compliance, and optimize workflows.
           </p>
 
-          {/* Enhanced proof points grid with better mobile handling */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 max-w-2xl mx-auto mt-6 sm:mt-8">
-            <ProofChip
-              icon={TrendingUp}
-              label="Downtime Reduction"
-              valueClass="text-tech-blue"
-              suffix="%"
-              to={35}
-            />
-            <ProofChip
-              icon={Shield}
-              label="Compliance Accuracy"
-              valueClass="text-success-green"
-              suffix="%"
-              to={95}
-            />
-            <ProofChip
-              icon={Zap}
-              label="Avg. Annual Savings"
-              valueClass="text-electric-purple"
-              prefix="$"
-              suffix="M"
-              to={2.4}
-              decimals={1}
-            />
-          </div>
 
           {/* Enhanced CTAs with better touch targets and responsive design */}
-          <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 print:hidden px-4">
+                  <div className="mt-8 flex flex-wrap justify-center lg:justify-start gap-4">
             <a
-              className="touch-target w-full sm:w-auto inline-flex h-12 sm:h-14 items-center justify-center rounded-xl bg-brand-green-500 px-6 sm:px-8 text-white font-medium text-sm sm:text-base
+              className="touch-target w-full sm:w-auto inline-flex h-14 items-center justify-center rounded-xl bg-brand-green-500 px-8 lg:px-10 text-white font-medium text-base lg:text-lg
                          hover:bg-brand-green-600 active:bg-brand-green-700 transition-colors duration-200
                          focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-green-600 focus-visible:ring-offset-2"
               href="#contact"
@@ -75,8 +53,8 @@ export default function Hero() {
               Get My Free ROI Assessment
             </a>
             <a
-              className="touch-target w-full sm:w-auto inline-flex h-12 sm:h-14 items-center justify-center rounded-xl border border-slate-200 bg-white px-6 sm:px-8
-                         text-slate-900 hover:bg-slate-50 transition-colors duration-200 font-medium text-sm sm:text-base
+              className="touch-target w-full sm:w-auto inline-flex h-14 items-center justify-center rounded-xl border border-border bg-white px-8 lg:px-10
+                         text-slate-900 hover:bg-slate-50 transition-colors duration-200 font-medium text-base lg:text-lg
                          focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-300 focus-visible:ring-offset-2"
               href="#case-studies"
             >
@@ -88,6 +66,29 @@ export default function Hero() {
           <p className="pt-3 sm:pt-4 text-xs sm:text-sm text-muted-foreground text-center px-4">
             Trusted by Fortune 500 companies • Enterprise-grade security • 8-week average deployment
           </p>
+        </div>
+                 {/* START: Stats Card Block */}
+        <div className="lg:justify-self-end">
+            <div className="rounded-lg border text-card-foreground shadow-sm p-8 bg-gradient-card border-border shadow-card">
+                <div className="grid grid-cols-2 gap-4 text-center">
+                    <div className="space-y-1">
+                        <div className="text-3xl font-bold text-tech-blue">35%</div>
+                        <div className="text-sm text-muted-foreground">Downtime Reduction</div>
+                    </div>
+                    <div className="space-y-1">
+                        <div className="text-3xl font-bold text-electric-purple">$2.4M</div>
+                        <div className="text-sm text-muted-foreground">Avg. Annual Savings</div>
+                    </div>
+                    <div className="space-y-1">
+                        <div className="text-3xl font-bold text-success-green">95%</div>
+                        <div className="text-sm text-muted-foreground">Compliance Accuracy</div>
+                    </div>
+                    <div className="space-y-1">
+                        <div className="text-3xl font-bold text-warning-amber">8-Week</div>
+                        <div className="text-sm text-muted-foreground">Average Deployment</div>
+                    </div>
+                </div>
+            </div>
         </div>
       </div>
     </section>

@@ -78,7 +78,7 @@ const UseCases = () => {
                   <ul className="space-y-2">
                     {useCase.benefits.map((benefit, idx) => (
                       <li key={idx} className="flex items-center space-x-3">
-                        <div className={`w-2 h-2 rounded-full bg-${useCase.color}`}></div>
+                        <div className={`w-2 h-2 rounded-full !bg-${useCase.color}`}></div>
                         <span className="text-sm">{benefit}</span>
                       </li>
                     ))}

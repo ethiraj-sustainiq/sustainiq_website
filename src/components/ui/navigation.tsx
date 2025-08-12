@@ -8,7 +8,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
             <a href="#" onClick={() => window.location.reload()}>
-              <img src="/sustainiq_logo.svg" alt="SustainIQ AI Logo" className="h-20" />
+              <img src="/sustainiq_logo.svg" alt="SustainIQ AI Logo" className="h-14" />
             </a>
           </div>
           

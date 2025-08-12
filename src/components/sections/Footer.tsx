@@ -39,36 +39,39 @@ const Footer = () => {
           </div>
           
           {/* Contact */}
+               {/* Contact */}
+                 {/* Contact */}
           <div className="space-y-4">
             <h3 className="font-semibold">Contact</h3>
-            <div className="space-y-3 text-sm">
-              <div className="flex items-center space-x-3 text-muted-foreground">
-                <Mail className="h-4 w-4" />
-                <a href="mailto:hello@fluxara.ai" className="hover:text-foreground transition-colors">
-                  customer-care@sustainiq.ai
+            <ul className="space-y-3 text-sm">
+              <li className="flex items-start space-x-3 text-muted-foreground">
+                <Mail className="h-4 w-4 mt-0.5 shrink-0" />
+                <a href="mailto:customer-care@sustainiq.ai" className="hover:text-foreground transition-colors">
+                  customer_care@sustainiq.ai
                 </a>
-              </div>
-              <div className="flex items-center space-x-3 text-muted-foreground">
-                <Phone className="h-4 w-4" />
+              </li>
+              <li className="flex items-start space-x-3 text-muted-foreground">
+                <Phone className="h-4 w-4 mt-0.5 shrink-0" />
                 <a href="tel:+1-555-0123" className="hover:text-foreground transition-colors">
                   +1 (555) 012-3456
                 </a>
-              </div>
-              <div className="flex items-center space-x-3 text-muted-foreground">
-                <Linkedin className="h-4 w-4" />
+              </li>
+              <li className="flex items-start space-x-3 text-muted-foreground">
+                <Linkedin className="h-4 w-4 mt-0.5 shrink-0" />
                 <a href="https://linkedin.com/company/sustainiq-ai" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">
                   LinkedIn
                 </a>
-              </div>
-              <div className="flex items-start space-x-3 text-muted-foreground">
-                <MapPin className="h-4 w-4 mt-0.5" />
+              </li>
+              <li className="flex items-start space-x-3 text-muted-foreground">
+                <MapPin className="h-4 w-4 mt-0.5 shrink-0" />
                 <span>
                   77 Sugar Creek Center Blvd Ste. 600<br />
                   Sugar Land, TX 77478
                 </span>
-              </div>
-            </div>
+              </li>
+            </ul>
           </div>
+
         </div>
         
         <Separator className="my-8" />

@@ -94,7 +94,7 @@ const CaseStudies = () => {
                     ))}
                   </div>
                   
-                  <Button className="w-full bg-gradient-primary text-primary-foreground hover:opacity-90 group">
+                  <Button disabled className="w-full bg-gradient-primary text-primary-foreground hover:opacity-90 group">
                     View Full Case Study
                     <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                   </Button>
@@ -103,12 +103,7 @@ const CaseStudies = () => {
             </Card>
           ))}
         </div>
-        
-        <div className="text-center mt-12">
-          <Button size="lg" variant="outline" className="border-border hover:bg-secondary">
-            Explore Our Work
-          </Button>
-        </div>
+      
       </div>
     </section>
   );
