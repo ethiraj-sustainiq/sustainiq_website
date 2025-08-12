@@ -41,7 +41,7 @@ export default function Hero() {
                 Unifies<br />Operations + Documentation<br />Intelligence
               </span>
             </span>
-          </h1>
+          </h1> 
           {/* Enhanced description with better spacing and readability */}
           <p className="mt-4 sm:mt-6 max-w-[90%] sm:max-w-[65ch] mx-auto text-base sm:text-lg lg:text-xl text-muted-foreground print:text-black leading-relaxed">
                For industrial leaders in Energy, Oil & Gas, and Manufacturing. We connect your operational data with equipment manuals and procedures to predict failures, automate compliance, and optimize workflows.
