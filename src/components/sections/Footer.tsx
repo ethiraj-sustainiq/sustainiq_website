@@ -44,8 +44,8 @@ const Footer = () => {
             <div className="space-y-3 text-sm">
               <div className="flex items-center space-x-3 text-muted-foreground">
                 <Mail className="h-4 w-4" />
-                <a href="mailto:hello@sustainiq.ai" className="hover:text-foreground transition-colors">
-                  hello@sustainiq.ai
+                <a href="mailto:hello@fluxara.ai" className="hover:text-foreground transition-colors">
+                  customer-care@sustainiq.ai
                 </a>
               </div>
               <div className="flex items-center space-x-3 text-muted-foreground">

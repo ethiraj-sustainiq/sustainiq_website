@@ -1,96 +1,169 @@
-import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
-import { ArrowRight, Zap, TrendingUp, Shield } from "lucide-react";
-import heroImage from "@/assets/hero-bg.jpg";
+// Enhanced Hero.tsx with better cross-platform consistency
+import { useEffect, useState } from "react";
+import type { ComponentType } from "react";
+import { Shield, Zap, TrendingUp } from "lucide-react";
+import {
+  motion,
+  useReducedMotion,
+  MotionConfig,
+  useMotionValue,
+  animate,
+} from "framer-motion";
 
-const Hero = () => {
+export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-gradient-hero overflow-hidden">
-      {/* Background Image with Overlay */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center opacity-10"
-        style={{ backgroundImage: `url(${heroImage})` }}
+    <section className="relative overflow-hidden bg-gradient-hero print:overflow-visible print:bg-white">
+      {/* Enhanced decorative floaters with better performance */}
+      <div className="pointer-events-none absolute -top-10 left-10 h-24 w-24 animate-float rounded-full bg-tech-blue/20 blur-xl print:hidden will-change-transform" />
+      <div
+        className="pointer-events-none absolute bottom-0 right-10 h-36 w-36 animate-float rounded-full bg-electric-purple/20 blur-xl print:hidden will-change-transform"
+        style={{ animationDelay: "1.2s" }}
       />
-      
-      {/* Floating Elements */}
-      <div className="absolute top-20 left-10 animate-float">
-        <div className="w-16 h-16 bg-tech-blue/20 rounded-full blur-xl"></div>
-      </div>
-      <div className="absolute bottom-32 right-16 animate-float" style={{ animationDelay: '1s' }}>
-        <div className="w-24 h-24 bg-electric-purple/20 rounded-full blur-xl"></div>
-      </div>
-      
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-8">
-            <div className="space-y-4">
-              <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
-                The AI Platform That Unifies
-                <span className="text-gradient"> Operations + Documentation Intelligence</span>
-              </h1>
-              <p className="text-xl text-muted-foreground leading-relaxed">
-                The AI platform for industrial leaders in Energy, Oil & Gas, and Manufacturing. We connect your operational data with equipment manuals and procedures to predict failures, automate compliance, and optimize workflows.
-              </p>
-            </div>
-            
-            <div className="flex flex-wrap gap-4">
-              <a href="mailto:ethiraj.k@sustainiq.ai?subject=Inquiry about SustainIQ AI Platform&body=Hello, I saw your website and I'm interested in learning more about your AI platform. I'd like to schedule a time to discuss an ROI assessment.">
-                <Button size="lg" className="bg-gradient-primary text-primary-foreground hover:opacity-90 transition-opacity group">
-                  Get My Free ROI Assessment
-                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                </Button>
-              </a>
-              <a href="#case-studies">
-                <Button size="lg" variant="outline" className="border-border hover:bg-secondary">
-                  View Case Studies
-                </Button>
-              </a>
-            </div>
-            
-            <div className="flex items-center space-x-6 pt-4">
-              <div className="flex items-center space-x-2">
-                <Zap className="h-5 w-5 text-tech-blue" />
-                <span className="text-sm text-muted-foreground">Real-time Analytics</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <TrendingUp className="h-5 w-5 text-electric-purple" />
-                <span className="text-sm text-muted-foreground">AI-Powered Insights</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Shield className="h-5 w-5 text-success-green" />
-                <span className="text-sm text-muted-foreground">Enterprise Security</span>
-              </div>
-            </div>
-          </div>
+
+      {/* Enhanced container with better responsive handling */}
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 grid grid-cols-1 items-center gap-8 py-12 sm:py-16 lg:py-20 min-h-screen-mobile safe-top">
+        
+        {/* Enhanced copy block with better typography scaling */}
+        <div className="space-y-6 sm:space-y-8 lg:col-span-1 lg:max-w-4xl lg:mx-auto text-center">
           
-          <div className="lg:justify-self-end">
-            <Card className="p-8 bg-gradient-card border-border shadow-card">
-              <div className="space-y-6">
-                <div className="grid grid-cols-2 gap-4 text-center">
-                  <div className="space-y-1">
-                    <div className="text-3xl font-bold text-tech-blue">35%</div>
-                    <div className="text-sm text-muted-foreground">Downtime Reduction</div>
-                  </div>
-                  <div className="space-y-1">
-                    <div className="text-3xl font-bold text-electric-purple">$2.4M</div>
-                    <div className="text-sm text-muted-foreground">Avg. Annual Savings</div>
-                  </div>
-                  <div className="space-y-1">
-                    <div className="text-3xl font-bold text-success-green">95%</div>
-                    <div className="text-sm text-muted-foreground">Compliance Accuracy</div>
-                  </div>
-                  <div className="space-y-1">
-                    <div className="text-3xl font-bold text-warning-amber">8-Week</div>
-                    <div className="text-sm text-muted-foreground">Average Deployment</div>
-                  </div>
-                </div>
-              </div>
-            </Card>
+          {/* Main headline with enhanced responsive typography */}
+          <h1 className="max-w-[90%] sm:max-w-[85%] mx-auto text-display-2 font-heading font-extrabold tracking-tight leading-[1.05] text-balance">
+            Turn Industrial Data Into{" "}
+            <span className="text-gradient">Instant, Actionable</span> Intelligence
+          </h1>
+
+          {/* Enhanced description with better spacing and readability */}
+          <p className="mt-4 sm:mt-6 max-w-[90%] sm:max-w-[65ch] mx-auto text-base sm:text-lg lg:text-xl text-muted-foreground print:text-black leading-relaxed">
+            SustainIQ AI connects your real-time equipment data with manuals, procedures, and compliance documents — so you can predict failures, prevent downtime, and stay audit-ready automatically.
+          </p>
+
+          {/* Enhanced proof points grid with better mobile handling */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 max-w-2xl mx-auto mt-6 sm:mt-8">
+            <ProofChip
+              icon={TrendingUp}
+              label="Downtime Reduction"
+              valueClass="text-tech-blue"
+              suffix="%"
+              to={35}
+            />
+            <ProofChip
+              icon={Shield}
+              label="Compliance Accuracy"
+              valueClass="text-success-green"
+              suffix="%"
+              to={95}
+            />
+            <ProofChip
+              icon={Zap}
+              label="Avg. Annual Savings"
+              valueClass="text-electric-purple"
+              prefix="$"
+              suffix="M"
+              to={2.4}
+              decimals={1}
+            />
           </div>
+
+          {/* Enhanced CTAs with better touch targets and responsive design */}
+          <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 print:hidden px-4">
+            <a
+              className="touch-target w-full sm:w-auto inline-flex h-12 sm:h-14 items-center justify-center rounded-xl bg-brand-green-500 px-6 sm:px-8 text-white font-medium text-sm sm:text-base
+                         hover:bg-brand-green-600 active:bg-brand-green-700 transition-colors duration-200
+                         focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-green-600 focus-visible:ring-offset-2"
+              href="#contact"
+            >
+              Get My Free ROI Assessment
+            </a>
+            <a
+              className="touch-target w-full sm:w-auto inline-flex h-12 sm:h-14 items-center justify-center rounded-xl border border-slate-200 bg-white px-6 sm:px-8
+                         text-slate-900 hover:bg-slate-50 transition-colors duration-200 font-medium text-sm sm:text-base
+                         focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-300 focus-visible:ring-offset-2"
+              href="#case-studies"
+            >
+              See Real Results
+            </a>
+          </div>
+
+          {/* Enhanced trust indicators with better mobile typography */}
+          <p className="pt-3 sm:pt-4 text-xs sm:text-sm text-muted-foreground text-center px-4">
+            Trusted by Fortune 500 companies • Enterprise-grade security • 8-week average deployment
+          </p>
         </div>
       </div>
     </section>
   );
-};
+}
 
-export default Hero;
+/* Enhanced ProofChip component with better accessibility and mobile design */
+function ProofChip({
+  icon: Icon,
+  valueClass = "",
+  prefix = "",
+  suffix = "",
+  to,
+  decimals = 0,
+  label,
+}: {
+  icon: ComponentType<{ className?: string }>;
+  valueClass?: string;
+  prefix?: string;
+  suffix?: string;
+  to: number;
+  decimals?: number;
+  label: string;
+}) {
+  return (
+    <div className="flex items-center gap-2 sm:gap-3 rounded-xl border border-border bg-background/90 backdrop-blur-sm p-3 sm:p-4 shadow-sm hover:shadow-md transition-shadow duration-200">
+      <div className={`flex-shrink-0 ${valueClass}`}>
+        <Icon className="h-4 w-4 sm:h-5 sm:w-5" />
+      </div>
+      <div className="leading-tight min-w-0 flex-1">
+        <div className={`text-lg sm:text-xl lg:text-2xl font-extrabold ${valueClass}`}>
+          <CountUp to={to} decimals={decimals} prefix={prefix} suffix={suffix} />
+        </div>
+        <div className="text-xs sm:text-sm text-muted-foreground">{label}</div>
+      </div>
+    </div>
+  );
+}
+
+/* Enhanced CountUp with better performance and accessibility */
+function CountUp({
+  to,
+  decimals = 0,
+  duration = 1.1,
+  prefix = "",
+  suffix = "",
+}: {
+  to: number;
+  decimals?: number;
+  duration?: number;
+  prefix?: string;
+  suffix?: string;
+}) {
+  const prefersReducedMotion = useReducedMotion();
+  const mv = useMotionValue(0);
+  const [val, setVal] = useState(0);
+
+  useEffect(() => {
+    if (prefersReducedMotion) {
+      setVal(to);
+      return;
+    }
+
+    const controls = animate(mv, to, {
+      duration: duration,
+      ease: "easeOut",
+    });
+    
+    const unsub = mv.on("change", (v) => setVal(v));
+    
+    return () => {
+      controls.stop();
+      unsub();
+    };
+  }, [to, mv, duration, prefersReducedMotion]);
+
+  const formatted = decimals > 0 ? val.toFixed(decimals) : Math.round(val).toString();
+  return <span>{prefix}{formatted}{suffix}</span>;
+}
