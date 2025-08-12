@@ -30,7 +30,7 @@ export default function Hero() {
         {/* END: Stats Card Block */}  
           
           {/* Main headline with enhanced responsive typography */}
-            <h1 className="text-5xl lg:text-6xl font-bold leading-tight text-balance">
+             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-balance">
             The AI Platform That{" "}
             <span className="text-gradient">
               Unifies<br />Operations + Documentation<br />Intelligence
