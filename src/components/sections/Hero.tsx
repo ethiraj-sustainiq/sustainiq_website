@@ -30,12 +30,18 @@ export default function Hero() {
         {/* END: Stats Card Block */}  
           
           {/* Main headline with enhanced responsive typography */}
-             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-balance">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-balance">
             The AI Platform That{" "}
             <span className="text-gradient">
-              Unifies<br />Operations + Documentation<br />Intelligence
+              {/* This span is ONLY visible on screens smaller than lg (mobile/tablet) */}
+              <span className="lg:hidden"> Unifies Operations + Documentation Intelligence</span>
+              
+              {/* This span is HIDDEN until the screen is lg or wider (desktop) */}
+              <span className="hidden lg:inline">
+                Unifies<br />Operations + Documentation<br />Intelligence
+              </span>
             </span>
-          </h1>
+          </h1> 
           {/* Enhanced description with better spacing and readability */}
           <p className="mt-4 sm:mt-6 max-w-[90%] sm:max-w-[65ch] mx-auto text-base sm:text-lg lg:text-xl text-muted-foreground print:text-black leading-relaxed">
                For industrial leaders in Energy, Oil & Gas, and Manufacturing. We connect your operational data with equipment manuals and procedures to predict failures, automate compliance, and optimize workflows.
