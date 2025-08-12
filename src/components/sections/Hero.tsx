@@ -20,16 +20,18 @@ export default function Hero() {
         style={{ animationDelay: "1.2s" }}
       />
 
-      {/* Enhanced container with better responsive handling */}
-      <div className="container mx-auto px-6 relative z-10 grid lg:grid-cols-2 gap-12 items-center pt-32 pb-12 sm:pt-36 sm:pb-16 lg:pt-40 lg:pb-20 min-h-screen-mobile safe-top">
+      {/* Original aggressive top padding */}
+      <div className="container mx-auto px-6 relative z-10 grid lg:grid-cols-2 gap-12 items-center pt-56 pb-12 sm:pt-60 sm:pb-16 lg:pt-64 lg:pb-20 min-h-screen-mobile safe-top">
         
         {/* Enhanced copy block with better typography scaling */}
-       <div className="space-y-8 text-center lg:text-left">
-
-     
-        {/* END: Stats Card Block */}  
+        <div className="space-y-8 text-center lg:text-left">
           
-          {/* Main headline with enhanced responsive typography */}
+          {/* INVISIBLE SPACER - Same dimensions as debug box but hidden */}
+          <div className="invisible px-4 py-2 rounded text-sm mb-4 border">
+            Debug: If you can see this red box, the hero section is properly spaced from navigation
+          </div>
+          
+          {/* Main headline with enhanced responsive typography and better line spacing */}
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-balance">
             The AI Platform That{" "}
             <span className="text-gradient">
@@ -42,14 +44,14 @@ export default function Hero() {
               </span>
             </span>
           </h1> 
+
           {/* Enhanced description with better spacing and readability */}
-          <p className="mt-4 sm:mt-6 max-w-[90%] sm:max-w-[65ch] mx-auto text-base sm:text-lg lg:text-xl text-muted-foreground print:text-black leading-relaxed">
-               For industrial leaders in Energy, Oil & Gas, and Manufacturing. We connect your operational data with equipment manuals and procedures to predict failures, automate compliance, and optimize workflows.
+          <p className="mt-4 sm:mt-6 max-w-[90%] sm:max-w-[65ch] mx-auto lg:mx-0 text-base sm:text-lg lg:text-xl text-muted-foreground print:text-black leading-relaxed">
+            For industrial leaders in Energy, Oil & Gas, and Manufacturing. We connect your operational data with equipment manuals and procedures to predict failures, automate compliance, and optimize workflows.
           </p>
 
-
           {/* Enhanced CTAs with better touch targets and responsive design */}
-                  <div className="mt-8 flex flex-wrap justify-center lg:justify-start gap-4">
+          <div className="mt-8 flex flex-wrap justify-center lg:justify-start gap-4">
             <a
               className="touch-target w-full sm:w-auto inline-flex h-14 items-center justify-center rounded-xl bg-brand-green-500 px-8 lg:px-10 text-white font-medium text-base lg:text-lg
                          hover:bg-brand-green-600 active:bg-brand-green-700 transition-colors duration-200
@@ -66,41 +68,41 @@ export default function Hero() {
             >
               See Real Results
             </a>
-          </div>
+            </div>
 
           {/* Enhanced trust indicators with better mobile typography */}
-          <p className="pt-3 sm:pt-4 text-xs sm:text-sm text-muted-foreground text-center px-4">
+          <p className="pt-3 sm:pt-4 text-xs sm:text-sm text-muted-foreground text-center lg:text-left px-4 lg:px-0">
             Trusted by Fortune 500 companies • Enterprise-grade security • 8-week average deployment
           </p>
         </div>
-                 {/* START: Stats Card Block */}
+
+        {/* START: Stats Card Block */}
         <div className="lg:justify-self-end">
-            <div className="rounded-lg border text-card-foreground shadow-sm p-8 bg-gradient-card border-border shadow-card">
-                <div className="grid grid-cols-2 gap-4 text-center">
-                    <div className="space-y-1">
-                        <div className="text-3xl font-bold text-tech-blue">35%</div>
-                        <div className="text-sm text-muted-foreground">Downtime Reduction</div>
-                    </div>
-                    <div className="space-y-1">
-                        <div className="text-3xl font-bold text-electric-purple">$2.4M</div>
-                        <div className="text-sm text-muted-foreground">Avg. Annual Savings</div>
-                    </div>
-                    <div className="space-y-1">
-                        <div className="text-3xl font-bold text-success-green">95%</div>
-                        <div className="text-sm text-muted-foreground">Compliance Accuracy</div>
-                    </div>
-                    <div className="space-y-1">
-                        <div className="text-3xl font-bold text-warning-amber">8-Week</div>
-                        <div className="text-sm text-muted-foreground">Average Deployment</div>
-                    </div>
-                </div>
+          <div className="rounded-lg border text-card-foreground shadow-sm p-8 bg-gradient-card border-border shadow-card">
+            <div className="grid grid-cols-2 gap-4 text-center">
+              <div className="space-y-1">
+                <div className="text-3xl font-bold text-tech-blue">35%</div>
+                <div className="text-sm text-muted-foreground">Downtime Reduction</div>
+              </div>
+              <div className="space-y-1">
+                <div className="text-3xl font-bold text-electric-purple">$2.4M</div>
+                <div className="text-sm text-muted-foreground">Avg. Annual Savings</div>
+              </div>
+              <div className="space-y-1">
+                <div className="text-3xl font-bold text-success-green">95%</div>
+                <div className="text-sm text-muted-foreground">Compliance Accuracy</div>
+              </div>
+              <div className="space-y-1">
+                <div className="text-3xl font-bold text-warning-amber">8-Week</div>
+                <div className="text-sm text-muted-foreground">Average Deployment</div>
+              </div>
             </div>
+          </div>
         </div>
       </div>
     </section>
   );
 }
-
 /* Enhanced ProofChip component with better accessibility and mobile design */
 function ProofChip({
   icon: Icon,
