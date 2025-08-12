@@ -90,7 +90,7 @@ const Technology = () => {
         {/* Architecture Features */}
         <div className="mb-16">
           <h3 className="text-3xl font-bold text-center mb-12">Reference Architectures</h3>
-          <div className="grid lg:grid-cols-4 gap-8">
+           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {architectureFeatures.map((feature, index) => (
               <Card key={index} className="p-8 bg-gradient-card border-border shadow-card text-center">
                 <div className="space-y-4">
