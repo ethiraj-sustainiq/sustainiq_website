@@ -12,27 +12,27 @@ import {
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-gradient-hero print:overflow-visible print:bg-white">
-      {/* Enhanced decorative floaters with better performance */}
-      <div className="pointer-events-none absolute -top-10 left-10 h-24 w-24 animate-float rounded-full bg-tech-blue/20 blur-xl print:hidden will-change-transform" />
-      <div
-        className="pointer-events-none absolute bottom-0 right-10 h-36 w-36 animate-float rounded-full bg-electric-purple/20 blur-xl print:hidden will-change-transform"
-        style={{ animationDelay: "1.2s" }}
-      />
+   
+    <section className="relative flex items-center bg-gradient-hero print:overflow-visible print:bg-white min-h-screen pt-24 safe-top">
+        {/* Enhanced decorative floaters with better performance */}
+        <div className="pointer-events-none absolute -top-10 left-10 h-24 w-24 animate-float rounded-full bg-tech-blue/20 blur-xl print:hidden will-change-transform" />
+        <div
+          className="pointer-events-none absolute bottom-0 right-10 h-36 w-36 animate-float rounded-full bg-electric-purple/20 blur-xl print:hidden will-change-transform"
+          style={{ animationDelay: "1.2s" }}
+        />
 
       {/* Original aggressive top padding */}
-      <div className="container mx-auto px-6 relative z-10 grid lg:grid-cols-2 gap-12 items-center pt-56 pb-12 sm:pt-60 sm:pb-16 lg:pt-64 lg:pb-20 min-h-screen-mobile safe-top">
-        
-        {/* Enhanced copy block with better typography scaling */}
-        <div className="space-y-8 text-center lg:text-left">
+       <div className="container mx-auto px-6 relative z-10 grid lg:grid-cols-2 gap-12 items-center">
+         {/* Enhanced copy block with better typography scaling */}
+         <div className="space-y-8 text-center lg:text-left">
           
           {/* INVISIBLE SPACER - Same dimensions as debug box but hidden */}
           <div className="invisible px-4 py-2 rounded text-sm mb-4 border">
             Debug: If you can see this red box, the hero section is properly spaced from navigation
           </div>
-          
-          {/* Main headline with enhanced responsive typography and better line spacing */}
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-balance">
+           
+           {/* Main headline with enhanced responsive typography and better line spacing */}
+           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-balance">
             The AI Platform That{" "}
             <span className="text-gradient">
               {/* This span is ONLY visible on screens smaller than lg (mobile/tablet) */}
