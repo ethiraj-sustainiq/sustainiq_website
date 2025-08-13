@@ -29,8 +29,8 @@ const Navigation = () => {
             <Link to="/blog" className="text-muted-foreground hover:text-primary font-bold transition-colors">
               Blog
             </Link>
-            <Link to="/product-preview" className="text-muted-foreground hover:text-primary font-bold transition-colors">
-              Product Preview
+            <Link to="/platform-preview" className="text-muted-foreground hover:text-primary font-bold transition-colors">
+              Platform Preview
             </Link>
             <a href="#contact" className="text-muted-foreground hover:text-primary font-bold transition-colors">
               Contact
@@ -60,7 +60,7 @@ const Navigation = () => {
                   <a href="/#case-studies" onClick={() => setIsOpen(false)} className="text-lg font-medium hover:text-primary">Case Studies</a>
                   <a href="/#technology" onClick={() => setIsOpen(false)} className="text-lg font-medium hover:text-primary">Technology</a>
                   <Link to="/blog" onClick={() => setIsOpen(false)} className="text-lg font-medium hover:text-primary">Blog</Link>
-                  <Link to="/product-preview" onClick={() => setIsOpen(false)} className="text-lg font-medium hover:text-primary">Product Preview</Link>
+                  <Link to="/platform-preview" onClick={() => setIsOpen(false)} className="text-lg font-medium hover:text-primary">Platform Preview</Link>
                   <a href="/#contact" onClick={() => setIsOpen(false)} className="text-lg font-medium hover:text-primary">Contact</a>
                   <div className="pt-8">
                     <a href="mailto:ethiraj.k@sustainiq.ai?subject=Inquiry about SustainIQ AI Platform&body=Hello, I saw your website and I'm interested in learning more about your AI platform. I'd like to schedule a time to discuss an ROI assessment.">
