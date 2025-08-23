@@ -18,11 +18,11 @@ const Team = () => {
   ];
 
   const credentials = [
-    "15+ Years in Enterprise Software",
-    "Deep Expertise in Time-Series Analytics",
+    "20+ Years in Energy Operations & Digital Transformation",
+    "Deep Expertise in SCADA & Historian Systems",
     "Certified Cloud & Data Architects",
     "Proven Success in Energy & Manufacturing",
-    "Experts in LLM & RAG Systems",
+    "Industrial AI & Document Intelligence Systems",
   ];
 
   return (

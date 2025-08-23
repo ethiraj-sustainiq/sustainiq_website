@@ -10,7 +10,7 @@ import {
   LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend,
 } from "recharts"
 import {
-  AlertTriangle, CheckCircle, XCircle, Activity, Thermometer, Gauge, Droplets, Zap, FileText, ArrowLeft,
+  AlertTriangle, CheckCircle, XCircle, Activity, Thermometer, Gauge, Droplets, Zap, FileText, ArrowLeft, ArrowRight, Shield,
 } from "lucide-react"
 
 const SHOW_TOP_KPIS = false
@@ -137,8 +137,8 @@ export default function PrototypeDashboard() {
 
           <div className="flex items-center justify-center space-x-8">
             <div className="flex flex-col items-center space-y-2">
-              <div className="w-16 h-16 bg-muted rounded-full flex items-center justify-center animate-pulse">
-                <Activity className="w-8 h-8 text-primary animate-bounce" />
+              <div className="w-16 h-16 bg-success-green/20 rounded-full flex items-center justify-center animate-pulse">
+                <Activity className="w-8 h-8 text-success-green animate-bounce" />
               </div>
               <span className="text-sm text-muted-foreground">Data Stream</span>
             </div>
@@ -148,8 +148,8 @@ export default function PrototypeDashboard() {
               </svg>
             </div>
             <div className="flex flex-col items-center space-y-2">
-              <div className="w-16 h-16 bg-muted rounded-full flex items-center justify-center animate-pulse">
-                <FileText className="w-8 h-8 text-primary animate-bounce" />
+              <div className="w-16 h-16 bg-success-green/20 rounded-full flex items-center justify-center animate-pulse">
+                <FileText className="w-8 h-8 text-success-green animate-bounce" />
               </div>
               <span className="text-sm text-muted-foreground">Analysis</span>
             </div>
@@ -159,8 +159,8 @@ export default function PrototypeDashboard() {
               </svg>
             </div>
             <div className="flex flex-col items-center space-y-2">
-              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center animate-pulse">
-                <Zap className="w-8 h-8 text-primary-foreground animate-spin" />
+              <div className="w-16 h-16 bg-success-green rounded-full flex items-center justify-center animate-pulse">
+                <Zap className="w-8 h-8 text-white animate-spin" />
               </div>
               <span className="text-sm text-muted-foreground">SustainIQ AI</span>
             </div>
@@ -168,7 +168,7 @@ export default function PrototypeDashboard() {
 
           <div className="w-64 mx-auto">
             <div className="w-full bg-muted rounded-full h-2">
-              <div className="bg-primary h-2 rounded-full animate-pulse" style={{ width: "75%" }} />
+              <div className="bg-success-green h-2 rounded-full animate-pulse" style={{ width: "75%" }} />
             </div>
           </div>
         </div>
@@ -198,11 +198,38 @@ export default function PrototypeDashboard() {
               <h1 className="text-2xl font-bold text-foreground">Compliance Monitoring Dashboard</h1>
               <p className="text-muted-foreground">Real-time regulatory compliance tracking with automated reporting</p>
             </div>
-            <Button variant="outline" onClick={() => setScreen("dashboard")}>
-              <ArrowLeft className="mr-2 h-4 w-4" />
-              Back to Dashboard
-            </Button>
           </div>
+
+          {/* Platform Navigation Tabs */}
+          <Card className="bg-gradient-card border-border">
+            <CardContent className="p-6">
+              <div className="flex items-center justify-center space-x-8">
+                <button
+                  onClick={() => setScreen("dashboard")}
+                  className="flex items-center space-x-3 px-6 py-3 rounded-lg font-medium transition-all duration-200 text-muted-foreground hover:text-foreground hover:bg-muted/50"
+                >
+                  <Gauge className="h-5 w-5" />
+                  <span>Operations Overview</span>
+                </button>
+                
+                <button
+                  onClick={() => handleInvestigate(assets[0])}
+                  className="flex items-center space-x-3 px-6 py-3 rounded-lg font-medium transition-all duration-200 text-muted-foreground hover:text-foreground hover:bg-muted/50"
+                >
+                  <Activity className="h-5 w-5" />
+                  <span>AI Diagnostics</span>
+                </button>
+                
+                <button
+                  onClick={() => setScreen("compliance")}
+                  className="flex items-center space-x-3 px-6 py-3 rounded-lg font-medium transition-all duration-200 bg-success-green text-white shadow-lg"
+                >
+                  <Shield className="h-5 w-5" />
+                  <span>Compliance Monitoring</span>
+                </button>
+              </div>
+            </CardContent>
+          </Card>
 
           {/* Compliance Status Overview */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -453,11 +480,11 @@ export default function PrototypeDashboard() {
             </div>
             <div className="flex gap-2">
               <Button variant="outline" onClick={() => setScreen("report")}>
-                Back to Summary
+                <ArrowLeft className="mr-2 h-4 w-4" />
+                Back to Results Summary
               </Button>
               <Button variant="outline" onClick={() => setScreen("dashboard")}>
-                <ArrowLeft className="mr-2 h-4 w-4" />
-                Back to Dashboard
+                Start Over
               </Button>
             </div>
           </div>
@@ -602,7 +629,7 @@ export default function PrototypeDashboard() {
             </CardHeader>
             <CardContent>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <Button className="w-full" variant="destructive">
+                <Button className="w-full bg-gradient-primary text-primary-foreground hover:opacity-90">
                   Schedule Emergency Maintenance
                 </Button>
                 <Button className="w-full" variant="outline">
@@ -629,15 +656,10 @@ export default function PrototypeDashboard() {
               <h1 className="text-2xl font-bold text-foreground">Unified Intelligence Report</h1>
               <p className="text-muted-foreground">Asset: {selectedAsset?.name}</p>
             </div>
-            <div className="flex gap-2">
-              <Button variant="outline" onClick={() => setScreen("diagnostic")}>
-                View Diagnostic Details
-              </Button>
-              <Button variant="outline" onClick={() => setScreen("dashboard")}>
-                <ArrowLeft className="mr-2 h-4 w-4" />
-                Back to Dashboard
-              </Button>
-            </div>
+            <Button variant="outline" onClick={() => setScreen("dashboard")}>
+              <ArrowLeft className="mr-2 h-4 w-4" />
+              Start Over
+            </Button>
           </div>
 
           <Card>
@@ -757,16 +779,18 @@ export default function PrototypeDashboard() {
                     <Button className="w-full" variant="destructive">Schedule Maintenance</Button>
                     <Button className="w-full" variant="outline">Generate Audit-Ready Report</Button>
                     <a
-                      className="w-full inline-flex items-center justify-center rounded-md px-3 py-2 bg-gradient-primary text-primary-foreground hover:opacity-90"
+                      className="w-full inline-flex items-center justify-center rounded-md px-3 py-2 bg-gradient-primary text-primary-foreground hover:opacity-90 group"
                       href="mailto:ethiraj.k@sustainiq.ai?subject=ROI%20Assessment&body=We%20would%20like%20a%20custom%20ROI%20projection%20for%20assets%20X%2FY%2FZ."
                     >
                       Get Free ROI Assessment
+                      <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                     </a>
                   </CardContent>
                 </Card>
               </div>
             </CardContent>
           </Card>
+
         </div>
       </div>
     )
@@ -799,53 +823,102 @@ export default function PrototypeDashboard() {
               Real-time monitoring with unified intelligence workflow
             </p>
           </div>
-          <div className="flex items-center gap-4">
-            <Button variant="outline" onClick={() => setScreen("compliance")}>
-              View Compliance Dashboard
-            </Button>
-            <div className="text-right">
-              <p className="text-sm text-muted-foreground">Last Updated</p>
-              <p className="font-mono text-sm">{now.toLocaleString()}</p>
-            </div>
+          <div className="text-right">
+            <p className="text-sm text-muted-foreground">Last Updated</p>
+            <p className="font-mono text-sm">{now.toLocaleString()}</p>
           </div>
         </div>
 
-        {/* Demo Context Box */}
-        <Card className="bg-gradient-to-r from-muted/30 to-muted/10 border-muted">
-          <CardContent className="p-4">
-            <div className="flex items-start space-x-3">
-              <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                <Activity className="h-5 w-5 text-primary" />
-              </div>
-              <div>
-                <h3 className="font-semibold text-foreground mb-1">Live Platform Demo</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  This preview showcases our platform's current capabilities and planned roadmap features to help you envision the complete solution. Experience real-time monitoring, AI-powered diagnostics, and automated compliance reporting.
-                </p>
-              </div>
+        {/* Platform Navigation Tabs */}
+        <Card className="bg-gradient-card border-border">
+          <CardContent className="p-6">
+            <div className="flex items-center justify-center space-x-8">
+              <button
+                onClick={() => setScreen("dashboard")}
+                className={`flex items-center space-x-3 px-6 py-3 rounded-lg font-medium transition-all duration-200 ${
+                  screen === "dashboard" 
+                    ? "bg-success-green text-white shadow-lg" 
+                    : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
+                }`}
+              >
+                <Gauge className="h-5 w-5" />
+                <span>Operations Overview</span>
+              </button>
+              
+              <button
+                onClick={() => handleInvestigate(assets[0])}
+                className={`flex items-center space-x-3 px-6 py-3 rounded-lg font-medium transition-all duration-200 ${
+                  screen === "report" || screen === "investigation" || screen === "diagnostic"
+                    ? "bg-success-green text-white shadow-lg" 
+                    : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
+                }`}
+              >
+                <Activity className="h-5 w-5" />
+                <span>AI Diagnostics</span>
+              </button>
+              
+              <button
+                onClick={() => setScreen("compliance")}
+                className={`flex items-center space-x-3 px-6 py-3 rounded-lg font-medium transition-all duration-200 ${
+                  screen === "compliance" 
+                    ? "bg-success-green text-white shadow-lg" 
+                    : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
+                }`}
+              >
+                <Shield className="h-5 w-5" />
+                <span>Compliance Monitoring</span>
+              </button>
             </div>
           </CardContent>
         </Card>
 
-        {/* Brand KPIs */}
-        {SHOW_TOP_KPIS && (
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-            {[
-              { label: "Downtime Reduction", value: "35%" },
-              { label: "Avg. Annual Savings", value: "$2.4M" },
-              { label: "Compliance Accuracy", value: "95%" },
-              { label: "Avg. Deployment", value: "8 weeks" },
-            ].map((k) => (
-              <div key={k.label} className="rounded-lg border bg-card p-3">
-                <div className="text-xl font-bold text-primary">{k.value}</div>
-                <div className="text-xs text-muted-foreground">{k.label}</div>
-              </div>
-            ))}
-          </div>
+        {/* Current View Content */}
+        {screen === "dashboard" && (
+          <>
+            {/* Guided Demo Call-to-Action - Only shown in Operations Overview */}
+            <Card className="bg-gradient-card border-border shadow-glow">
+              <CardContent className="p-6 text-center">
+                <div className="space-y-4">
+                  <div className="w-16 h-16 rounded-full bg-success-green/20 flex items-center justify-center mx-auto">
+                    <Zap className="h-8 w-8 text-success-green" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-foreground mb-2">Experience AI-Powered Equipment Diagnosis</h3>
+                    <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
+                      Click "AI Diagnostics" above to see how our platform detects equipment issues, analyzes root causes, and provides actionable recommendations in real-time.
+                    </p>
+                    <p className="text-sm text-muted-foreground">
+                      Use the navigation tabs above to explore all platform capabilities
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </>
         )}
 
-        {/* KPI Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4">
+        {/* Dashboard Content - Only show when on dashboard screen */}
+        {screen === "dashboard" && (
+          <>
+            {/* Brand KPIs */}
+            {SHOW_TOP_KPIS && (
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                {[
+                  { label: "Downtime Reduction", value: "35%" },
+                  { label: "Avg. Annual Savings", value: "$2.4M" },
+                  { label: "Compliance Accuracy", value: "95%" },
+                  { label: "Avg. Deployment", value: "8 weeks" },
+                ].map((k) => (
+                  <div key={k.label} className="rounded-lg border bg-card p-3">
+                    <div className="text-xl font-bold text-primary">{k.value}</div>
+                    <div className="text-xs text-muted-foreground">{k.label}</div>
+                  </div>
+                ))}
+              </div>
+            )}
+
+            {/* KPI Cards */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4">
           <Card>
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
               <CardTitle className="text-sm font-medium">Avg Temperature</CardTitle>
@@ -940,11 +1013,11 @@ export default function PrototypeDashboard() {
           </Card>
         </div>
 
-        {/* Asset table */}
+        {/* Asset table - Informational only */}
         <Card>
           <CardHeader>
-            <CardTitle>Assets</CardTitle>
-            <CardDescription>Click investigate to see the AI workflow in action</CardDescription>
+            <CardTitle>Current Asset Status</CardTitle>
+            <CardDescription>Overview of monitored equipment and their current operational status</CardDescription>
           </CardHeader>
           <CardContent>
             <div className="overflow-x-auto">
@@ -956,7 +1029,6 @@ export default function PrototypeDashboard() {
                     <th className="py-2 pr-4">Status</th>
                     <th className="py-2 pr-4">Location</th>
                     <th className="py-2 pr-4">Last Maintenance</th>
-                    <th className="py-2 pr-4">Action</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -973,9 +1045,6 @@ export default function PrototypeDashboard() {
                         </td>
                         <td className="py-3 pr-4">{a.location}</td>
                         <td className="py-3 pr-4">{a.lastMaintenance}</td>
-                        <td className="py-3 pr-4">
-                          <Button size="sm" onClick={() => handleInvestigate(a)}>Investigate</Button>
-                        </td>
                       </tr>
                     )
                   })}
@@ -984,6 +1053,8 @@ export default function PrototypeDashboard() {
             </div>
           </CardContent>
         </Card>
+          </>
+        )}
       </div>
     </div>
   )

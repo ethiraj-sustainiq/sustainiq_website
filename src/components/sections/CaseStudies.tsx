@@ -6,9 +6,9 @@ import { ArrowRight, TrendingUp, Clock, Database } from "lucide-react";
 const CaseStudies = () => {
   const caseStudies = [
     {
-      company: "Major Energy Provider",
+      company: "Regional Energy Provider (Texas Gulf Coast)",
       industry: "Energy",
-      challenge: "Manual regulatory review processes taking weeks to complete, creating operational bottlenecks and compliance risks.",
+      challenge: "Manual environmental permit compliance reviews taking 2-3 weeks to complete, creating operational bottlenecks and regulatory compliance risks with EPA reporting deadlines.",
       solution: "We deployed our unified platform to connect their real-time operational data to their library of regulatory documents. Our AI agents now continuously monitor operations against compliance rules, automatically analyzing and citing the relevant documentation to slash review times.",
       results: [
         { metric: "60%", description: "Reduction in review cycle time", icon: Clock, color: "tech-blue" },
@@ -19,12 +19,12 @@ const CaseStudies = () => {
       role: "Head of Regulatory Affairs"
     },
     {
-      company: "Global Oil & Gas Corp",
+      company: "Midstream Oil & Gas Operator",
       industry: "Oil & Gas",
-      challenge: "Processing massive volumes of telemetry data from distributed operations while maintaining real-time visibility and control.",
-      solution: "We implemented our unified intelligence platform to process 475GB of daily telemetry data. The system doesn't just flag anomalies; it instantly cross-references them with the equipment's digitized OEM manuals and maintenance procedures to provide engineers with immediate, actionable diagnostic insights.",
+      challenge: "Processing massive volumes of SCADA and historian data from 12 distributed pipeline facilities while maintaining real-time visibility and operational control.",
+      solution: "We implemented our unified intelligence platform to process 475GB of daily SCADA and historian data. The system doesn't just flag anomalies; it instantly cross-references them with digitized OEM manuals and maintenance procedures to provide operations engineers with immediate, actionable diagnostic insights.",
       results: [
-        { metric: "475GB", description: "Daily telemetry processing", icon: Database, color: "tech-blue" },
+        { metric: "475GB", description: "Daily SCADA & historian data", icon: Database, color: "tech-blue" },
         { metric: "<1s", description: "Real-time response latency", icon: Clock, color: "electric-purple" },
         { metric: "30%", description: "Improved operational efficiency", icon: TrendingUp, color: "success-green" }
       ],

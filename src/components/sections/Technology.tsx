@@ -25,7 +25,7 @@ const Technology = () => {
     {
       category: "Security & Compliance",
       icon: Lock,
-      technologies: ["Zero Trust", "Encryption", "Audit Trails", "RBAC", "SOC 2 Type II"],
+      technologies: ["Zero Trust", "Encryption", "Audit Trails", "RBAC", "Enterprise Security"],
       color: "warning-amber"
     }
   ];
@@ -59,7 +59,7 @@ const Technology = () => {
         <div className="text-center mb-16 space-y-4">
           <h2 className="text-4xl lg:text-5xl font-bold">
             Built on
-            <span className="text-gradient"> Cutting-Edge Technology</span>
+            <span className="text-gradient"> Enterprise-Grade Platform</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Our platform is built on an enterprise-grade technical foundation designed to uniquely unify your operational and documentary data at scale.
@@ -118,8 +118,8 @@ const Technology = () => {
               <div className="text-sm text-muted-foreground">Uptime SLA</div>
             </div>
             <div className="space-y-2">
-              <div className="text-2xl font-bold text-tech-blue">SOC 2</div>
-              <div className="text-sm text-muted-foreground">Type II Certified</div>
+              <div className="text-2xl font-bold text-tech-blue">Secure</div>
+              <div className="text-sm text-muted-foreground">Enterprise-Grade</div>
             </div>
             <div className="space-y-2">
               <div className="text-2xl font-bold text-electric-purple">24/7</div>
